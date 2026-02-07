@@ -166,4 +166,12 @@ GitHub: https://github.com/ShreyaRaundal
 
 Add screenshots
 
-Make it interview-ready
+
+<img width="1124" height="573" alt="image" src="https://github.com/user-attachments/assets/3b36b7f0-410f-47a5-9923-6d585e2dcec6" />
+<img width="1176" height="559" alt="image" src="https://github.com/user-attachments/assets/4e1736b8-057e-42c5-b5f9-03f5529b0d99" />
+<img width="1130" height="581" alt="image" src="https://github.com/user-attachments/assets/64bdf3b8-99e8-4937-ae1c-54f67ed5de35" />
+<img width="1122" height="589" alt="image" src="https://github.com/user-attachments/assets/545164ad-507b-41bb-8ac5-ec33db32b1bd" />
+
+
+
+
