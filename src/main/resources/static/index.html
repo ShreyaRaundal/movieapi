@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎬 Movie Manager</h1>
+    <p>Simple Movie Management System</p>
+    <button class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
+
+<main>
+    <!-- ADD MOVIE CARD -->
+    <section class="card">
+        <h2>Add Movie</h2>
+        <input id="name" type="text" placeholder="Movie Name">
+        <input id="description" type="text" placeholder="Description">
+        <input id="genre" type="text" placeholder="Genre">
+        <button onclick="addMovie()">➕ Add Movie</button>
+    </section>
+
+    <!-- MOVIE LIST CARD -->
+    <section class="card">
+        <h2>Movie List</h2>
+
+        <!-- SEARCH -->
+        <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search by movie name"
+                onkeyup="renderMovies()"
+        >
+
+        <!-- GENRE FILTER -->
+        <select id="genreFilter" onchange="renderMovies()">
+            <option value="">All Genres</option>
+        </select>
+
+        <!-- EMPTY STATE -->
+        <p id="empty" class="empty">No movies added yet 🎥</p>
+
+        <!-- LOADER -->
+        <div id="loader" class="loader"></div>
+
+        <!-- MOVIE LIST -->
+        <ul id="movieList"></ul>
+    </section>
+</main>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
