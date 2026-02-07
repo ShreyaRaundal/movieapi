@@ -1,132 +1,169 @@
+🎬 Movie Management REST API
 
+A simple Java Spring Boot backend application with a basic frontend UI to manage movies.
+This project demonstrates REST API development, input validation, in-memory data storage, and cloud deployment.
 
-````md
-# Movie Management REST API
+🚀 Live Demo
 
-## Overview
-This is a simple Java Spring Boot backend application that provides a RESTful API
-for managing a collection of movies.  
-The application uses an **in-memory data store (ArrayList)** as required.
+🔗 Application URL:
+https://movieapi-1qvu.onrender.com
 
-## Tech Stack
-- Java 17
-- Spring Boot
-- REST API
-- In-memory storage using ArrayList
+⚠️ Note: This is hosted on Render (Free tier).
+The service may take 30–50 seconds to wake up on first request.
 
-## How to Run the Application
+🛠 Tech Stack
 
-### Prerequisites
-- Java 17 installed
-- Maven installed
+Backend
 
-### Steps to Run
-1. Clone the project or download the source code
-2. Open a terminal in the project root directory
-3. Run the application using:
-   ```bash
-   mvn spring-boot:run
-````
+Java 21
 
-4. The application will start at:
+Spring Boot
 
-   ```
-   http://localhost:8080
-   ```
+RESTful APIs
 
-## API Endpoints
+In-memory storage (ArrayList)
 
-### 1. Add a Movie
+Frontend
 
-**POST** `/api/movies`
+HTML
 
-**Request Body (JSON):**
+CSS
 
-```json
+JavaScript (Fetch API)
+
+Deployment
+
+Docker
+
+Render
+
+GitHub
+
+📁 Project Structure
+movieapi/
+│
+├── src/main/java/com/shreya/movieapi
+│   ├── controller
+│   │   └── MovieController.java
+│   ├── entity
+│   │   └── Movie.java
+│   ├── repository
+│   │   └── MovieRepository.java
+│   └── MovieapiApplication.java
+│
+├── src/main/resources
+│   ├── static
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js
+│   └── application.properties
+│
+├── Dockerfile
+├── pom.xml
+└── README.md
+
+📌 Features Implemented
+
+Add a new movie
+
+Get movie by ID
+
+Delete movie by ID
+
+Input validation (movie name required)
+
+Simple frontend UI
+
+CORS enabled
+
+Dockerized application
+
+Cloud deployment
+
+📡 API Endpoints
+➕ Add Movie
+
+POST /api/movies
+
+Request Body:
+
 {
-  "name": "Interstellar",
-  "description": "Sci-fi movie",
+  "name": "Inception",
+  "description": "Mind bending thriller",
   "genre": "Sci-Fi"
 }
-```
 
-**Response:**
 
-```json
+Response:
+
 {
   "id": 1,
-  "name": "Interstellar",
-  "description": "Sci-fi movie",
+  "name": "Inception",
+  "description": "Mind bending thriller",
   "genre": "Sci-Fi"
 }
-```
 
----
+🔍 Get Movie by ID
 
-### 2. Get Movie by ID
+GET /api/movies/{id}
 
-**GET** `/api/movies/{id}`
+Example:
 
-**Example:**
-
-```
 GET /api/movies/1
-```
 
-**Response:**
+❌ Delete Movie
 
-```json
-{
-  "id": 1,
-  "name": "Interstellar",
-  "description": "Sci-fi movie",
-  "genre": "Sci-Fi"
-}
-```
+DELETE /api/movies/{id}
 
----
+🧪 Testing the APIs
 
-### 3. Get All Movies (Optional Enhancement)
+You can test the APIs using:
 
-**GET** `/api/movies`
+Postman
 
-**Response:**
+Browser (GET requests)
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Interstellar",
-    "description": "Sci-fi movie",
-    "genre": "Sci-Fi"
-  },
-  {
-    "id": 2,
-    "name": "Inception",
-    "description": "Mind bending thriller",
-    "genre": "Sci-Fi"
-  }
-]
-```
+Frontend UI
 
----
+▶️ How to Run Locally
+Prerequisites
 
-## Input Validation
+Java 17+
 
-* Movie name is mandatory.
-* If the name is missing or empty, the API returns `400 Bad Request`.
+Maven
 
-## Important Notes
+Steps
+git clone https://github.com/ShreyaRaundal/movieapi.git
+cd movieapi
+mvn spring-boot:run
 
-* The application uses **in-memory storage (ArrayList)**.
-* Data is not persisted after application restart.
-* Movie IDs are auto-generated during runtime.
 
-## Future Enhancements
+Open in browser:
 
-* Persist data using a database
-* Add update and delete APIs
-* Add pagination and sorting
+http://localhost:8080
 
-```
+🐳 Docker Support
 
+To build and run using Docker:
+
+docker build -t movieapi .
+docker run -p 8080:8080 movieapi
+
+📝 Notes
+
+Data is stored in memory using ArrayList
+
+Restarting the app clears stored data
+
+Designed as a sample task for evaluation
+
+👩‍💻 Author
+
+Shreya Raundal
+GitHub: https://github.com/ShreyaRaundal
+
+
+
+Add screenshots
+
+Make it interview-ready
